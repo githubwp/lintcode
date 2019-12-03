@@ -8,7 +8,9 @@ package designpattern.singleton;
 public class ExecutorThread implements Runnable {
     @Override
     public void run() {
-        LazySimpleSingleton singleton = LazySimpleSingleton.getInstance();
+//        LazySimpleSingleton singleton = LazySimpleSingleton.getInstance();
+//        LazyDoubleCheckSingleton singleton = LazyDoubleCheckSingleton.getInstance();
+        LazyInnerClassSingleton singleton = LazyInnerClassSingleton.getInstance();
         System.out.println(Thread.currentThread().getName() + ":" + singleton);
     }
 }
